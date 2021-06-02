@@ -5,16 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-
+import { BrowserRouter } from 'react-router-dom'
 const client = new ApolloClient({
   uri: "https://www.crwn-clothing.com/"
 })
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-
-      <App />
-    </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
