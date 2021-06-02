@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Mens from './component/mens/mens.component'
+import Womens from './component/womens/womens.component'
+import Sneakers from './component/sneakers/sneakers.component'
+import Jackets from './component/jackets/jackets.component'
+import Hats from './component/hats/hats.component'
+const App = () => (
+  <div className="">
+    <nav className="navbar navbar-dark bg-primary">
+      <a className="navbar-brand" href="">React and GraphQL -  Application</a>
+    </nav>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-sm-2">
+          <Mens />
+        </div>
+        <div className="col-sm-2">
+          <Womens />
+        </div>
+        <div className="col-sm-2">
+          <Sneakers />
+        </div>
+        <div className="col-sm-2">
+          <Jackets />
+        </div>
+        <div className="col-sm-2">
+          <Hats />
+        </div>
+      </div>
     </div>
-  );
-}
+  </div>
+);
 
 export default App;
