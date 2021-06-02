@@ -12,6 +12,9 @@ const App = () => (
     <div className="container-fluid">
       <div className="row">
         <div className="col-sm-2">
+          <Jackets />
+        </div>
+        <div className="col-sm-2">
           <Mens />
         </div>
         <div className="col-sm-2">
@@ -20,9 +23,7 @@ const App = () => (
         <div className="col-sm-2">
           <Sneakers />
         </div>
-        <div className="col-sm-2">
-          <Jackets />
-        </div>
+
         <div className="col-sm-2">
           <Hats />
         </div>
