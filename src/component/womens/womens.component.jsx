@@ -24,14 +24,12 @@ const Womens = () => (
             if (error) { return <div>Error :</div> }
             return data && data.getCollectionsByTitle.items.map((singleProduact, index) => (
                 <>
-
                     <Women
                         key={index}
                         name={singleProduact.name}
                         imageUrl={singleProduact.imageUrl}
                         price={singleProduact.price}
                     />
-
                 </>
             ))
         }}
