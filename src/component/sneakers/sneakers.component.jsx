@@ -20,8 +20,8 @@ const Sneakers = () => (
     `}
     >
         {({ loading, error, data }) => {
-            if (loading) return <p> <Spinner />Loading...</p>
-            if (error) return <p>Error :</p>
+            if (loading) { return <div> <Spinner />Loading...</div> }
+            if (error) { return <div>Error :</div> }
             return data && data.getCollectionsByTitle.items.map((singleProduact) => (
                 <>
                     <Sneaker

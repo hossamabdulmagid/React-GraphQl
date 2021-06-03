@@ -20,22 +20,18 @@ const Womens = () => (
     `}
     >
         {({ loading, error, data }) => {
-            if (loading) return <p> <Spinner />Loading...</p>
-            if (error) return <p>Error :</p>
-            return data && data.getCollectionsByTitle.items.map((singleProduact) => (
+            if (loading) { return <div> <Spinner />Loading...</div> }
+            if (error) { return <div>Error :</div> }
+            return data && data.getCollectionsByTitle.items.map((singleProduact, index) => (
                 <>
-                    <div className="container"
-                        key={singleProduact.id}>
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <Women
-                                    name={singleProduact.name}
-                                    imageUrl={singleProduact.imageUrl}
-                                    price={singleProduact.price}
-                                />
-                            </div>
-                        </div>
-                    </div>
+
+                    <Women
+                        key={index}
+                        name={singleProduact.name}
+                        imageUrl={singleProduact.imageUrl}
+                        price={singleProduact.price}
+                    />
+
                 </>
             ))
         }}

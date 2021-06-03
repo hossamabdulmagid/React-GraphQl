@@ -12,7 +12,7 @@ const Men = ({ name, id, title, imageUrl, price }) => {
                     </Card.Text>
                     <span style={{ color: 'pink' }}>Price  <strong style={{ color: 'orange' }}>{price}$</strong></span>
                     <Card.Link href="#">{id}</Card.Link>
-                    <Button className="btn btn-dark center"  style={{ alignItems: 'center', margin: '0 auto' }}>Buy it now</Button>
+                    <Button className="btn btn-dark center" style={{ alignItems: 'center', margin: '0 auto' }}>Buy it now</Button>
 
                 </Card.Body>
             </Card>
