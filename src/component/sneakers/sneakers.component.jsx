@@ -1,6 +1,6 @@
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import { Spinner } from 'react-bootstrap'
+import Spinner from 'react-bootstrap/Spinner'
 import Sneaker from './sneaker.component'
 const Sneakers = () => (
     <Query
@@ -20,7 +20,7 @@ const Sneakers = () => (
     `}
     >
         {({ loading, error, data }) => {
-            if (loading) { return <div> <Spinner />Loading...</div> }
+            if (loading) { return <div className="container text-center" style={{ marginTop: '100px' }}><Spinner animation="border" size='lg' /></div> }
             if (error) { return <div>Error :</div> }
             return data && data.getCollectionsByTitle.items.map((singleProduact) => (
                 <>

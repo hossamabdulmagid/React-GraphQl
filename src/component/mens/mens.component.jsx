@@ -20,8 +20,8 @@ const Mens = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) { return <div> <Spinner />Loading...</div> }
-      if (error) { return <div>Error :</div> }
+            if (loading) { return <div className="container text-center" style={{ marginTop: '100px' }}><Spinner animation="border" size='lg' /></div> }
+            if (error) { return <div>Error :</div> }
       return data && data.getCollectionsByTitle.items.map((singleProduact, index) => (
         <>
           <Men
